@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
   avatar: {
     type: String,
   },
-  cloudinary_id: {
+  Description: {
     type: String,
   },
 });

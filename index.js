@@ -8,11 +8,10 @@ dotenv.config();
 
 // Connect DB
 mongoose
-  .connect(process.env.MONGO_URI, {
-    useCreateIndex: true,
-    useNewUrlParser: true,
-    useFindAndModify: false,
+  .connect(process.env.MONGODB_URI, {
+    dbName: process.env.DB_NAME,
     useUnifiedTopology: true,
+    useNewUrlParser: true,
   })
   .then(() => console.log("mongoDB is connected"))
   .catch((err) => console.log(err));
